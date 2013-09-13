@@ -6,6 +6,13 @@
 
   <body>
     <h1>Fileshare</h1>
+
+    <form enctype="multipart/form-data" method="post" action="{{ url_for('upload_file') }}">
+      <label for="file">
+        <input type="file" name="file" />
+      </label>
+      <input type="submit" value="Upload" />
+    </form>
   </body>
 
 </html>
