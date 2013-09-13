@@ -5,7 +5,7 @@
   </head>
 
   <body>
-    <h1>Fileshare</h1>
+    <h1><a href="{{ url_for('fileshare') }}">Fileshare</a></h1>
 
     <form enctype="multipart/form-data" method="post" action="{{ url_for('upload_file') }}">
       <label for="file">
@@ -13,6 +13,21 @@
       </label>
       <input type="submit" value="Upload" />
     </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Filename</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for file in files %}
+        <tr>
+          <td>{{ file }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
   </body>
 
 </html>
