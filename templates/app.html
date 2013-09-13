@@ -23,7 +23,7 @@
       <tbody>
       {% for file in files %}
         <tr>
-          <td>{{ file }}</td>
+          <td><a href="{{ url_for('download_file') }}">{{ file }}</a></td>
         </tr>
       {% endfor %}
       </tbody>
