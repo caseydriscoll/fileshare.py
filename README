@@ -1,0 +1,35 @@
+Fileshare.py is a simple (overly simple) filesharing app 
+written in the Python language using the Flask micro framework
+
+Fileshare.py is absolutely minimalist in design.
+No styling, scripting, tests or validation of any kind.
+Not a good idea to use in a production environment.
+
+It is a one page app consisting of four simple routes
+    1. A root route (/) that lists all files in a main index page 
+    2. An upload route (/upload) that POSTs and .save()s the selected file
+    3. A download route (/<filename>) that GETs and downloads the selected file
+    4. A delete route (/delete/<filename>) that remove()s the selected file
+
+All uploads are saved to the /files directory in the app.
+
+To run Fileshare.py on Mac OS X you must install the required dependencies:
+    1. Install the pip Python package manager
+        <http://pypi.python.org/pypi/pip>
+
+        > sudo easy_install pip
+
+    2. Install the Flask micro framework
+        <http://flask.pocoo.org/docs/>
+
+        > sudo pip install Flask
+
+    3. Enter the fileshare.py directory
+
+        > cd /path/to/fileshare.py
+
+    4. Start the Fileshare.py webapp
+
+        > python app.py
+
+    5. Open http://127.0.0.1:5000 in your favorite web browser!
